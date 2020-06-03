@@ -1,2 +1,2 @@
 # 2020XXX	 Minseon Kim
-# Kookmin Univ. Sw
+# Kookmin Univ. Computer Science
