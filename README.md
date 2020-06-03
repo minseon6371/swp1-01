@@ -1,2 +1,2 @@
-20203035 Minseon Kim
-Kookmin Univ. Sw
+#20203035 Minseon Kim
+#Kookmin Univ. Sw
