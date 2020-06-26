@@ -4,14 +4,14 @@ from template import html
 def application(environ, start_response):
     d = parse_qs(environ['QUERY_STRING'])
   
-    a = d.get('a', [''])[0]
-    b = d.get('b', [''])[0]
-    if '' not in [a, b]:
- 	a, b = int(a), int(b)
-    response_body = html % {
-	'sum' : a+b,
-	'mul' : a*b, 
-    } 
+    num1 = d.get('num1', [''])[0]
+    num2 = d.get('num2', [''])[0]
+    sum, mul = 0, 0
+    if '' not in [num1, num2]:
+	num1, num2 = int(num1), int(num2)
+        sum = num1 + num2
+        mul = num1 * num2  
+    response_body = html % {'sum':sum, 'mul':mul} 
     start_response('200 OK', [
         ('Content-Type', 'text/html'),
         ('Content-Length', str(len(response_body)))
